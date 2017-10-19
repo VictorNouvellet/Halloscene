@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57B1946A1F990D5300AD6336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B194691F990D5300AD6336 /* AppDelegate.swift */; };
+		57B1946C1F990D5300AD6336 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B1946B1F990D5300AD6336 /* ViewController.swift */; };
+		57B1946F1F990D5300AD6336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B1946D1F990D5300AD6336 /* Main.storyboard */; };
+		57B194711F990D5300AD6336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B194701F990D5300AD6336 /* Assets.xcassets */; };
+		57B194741F990D5300AD6336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B194721F990D5300AD6336 /* LaunchScreen.storyboard */; };
+		57B1947F1F990D5400AD6336 /* HallosceneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B1947E1F990D5400AD6336 /* HallosceneTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57B1947B1F990D5400AD6336 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57B1945E1F990D5300AD6336 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57B194651F990D5300AD6336;
+			remoteInfo = Halloscene;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		57B194661F990D5300AD6336 /* Halloscene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Halloscene.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57B194691F990D5300AD6336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57B1946B1F990D5300AD6336 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57B1946E1F990D5300AD6336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57B194701F990D5300AD6336 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57B194731F990D5300AD6336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57B194751F990D5300AD6336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57B1947A1F990D5400AD6336 /* HallosceneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HallosceneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57B1947E1F990D5400AD6336 /* HallosceneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallosceneTests.swift; sourceTree = "<group>"; };
+		57B194801F990D5400AD6336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57B194631F990D5300AD6336 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57B194771F990D5400AD6336 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57B1945D1F990D5300AD6336 = {
+			isa = PBXGroup;
+			children = (
+				57B194681F990D5300AD6336 /* Halloscene */,
+				57B1947D1F990D5400AD6336 /* HallosceneTests */,
+				57B194671F990D5300AD6336 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		57B194671F990D5300AD6336 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57B194661F990D5300AD6336 /* Halloscene.app */,
+				57B1947A1F990D5400AD6336 /* HallosceneTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57B194681F990D5300AD6336 /* Halloscene */ = {
+			isa = PBXGroup;
+			children = (
+				57B194691F990D5300AD6336 /* AppDelegate.swift */,
+				57B1946B1F990D5300AD6336 /* ViewController.swift */,
+				57B1946D1F990D5300AD6336 /* Main.storyboard */,
+				57B194701F990D5300AD6336 /* Assets.xcassets */,
+				57B194721F990D5300AD6336 /* LaunchScreen.storyboard */,
+				57B194751F990D5300AD6336 /* Info.plist */,
+			);
+			path = Halloscene;
+			sourceTree = "<group>";
+		};
+		57B1947D1F990D5400AD6336 /* HallosceneTests */ = {
+			isa = PBXGroup;
+			children = (
+				57B1947E1F990D5400AD6336 /* HallosceneTests.swift */,
+				57B194801F990D5400AD6336 /* Info.plist */,
+			);
+			path = HallosceneTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57B194651F990D5300AD6336 /* Halloscene */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57B194831F990D5400AD6336 /* Build configuration list for PBXNativeTarget "Halloscene" */;
+			buildPhases = (
+				57B194621F990D5300AD6336 /* Sources */,
+				57B194631F990D5300AD6336 /* Frameworks */,
+				57B194641F990D5300AD6336 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Halloscene;
+			productName = Halloscene;
+			productReference = 57B194661F990D5300AD6336 /* Halloscene.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57B194791F990D5400AD6336 /* HallosceneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57B194861F990D5400AD6336 /* Build configuration list for PBXNativeTarget "HallosceneTests" */;
+			buildPhases = (
+				57B194761F990D5400AD6336 /* Sources */,
+				57B194771F990D5400AD6336 /* Frameworks */,
+				57B194781F990D5400AD6336 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57B1947C1F990D5400AD6336 /* PBXTargetDependency */,
+			);
+			name = HallosceneTests;
+			productName = HallosceneTests;
+			productReference = 57B1947A1F990D5400AD6336 /* HallosceneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57B1945E1F990D5300AD6336 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Victor Nouvellet";
+				TargetAttributes = {
+					57B194651F990D5300AD6336 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					57B194791F990D5400AD6336 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 57B194651F990D5300AD6336;
+					};
+				};
+			};
+			buildConfigurationList = 57B194611F990D5300AD6336 /* Build configuration list for PBXProject "Halloscene" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57B1945D1F990D5300AD6336;
+			productRefGroup = 57B194671F990D5300AD6336 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57B194651F990D5300AD6336 /* Halloscene */,
+				57B194791F990D5400AD6336 /* HallosceneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57B194641F990D5300AD6336 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57B194741F990D5300AD6336 /* LaunchScreen.storyboard in Resources */,
+				57B194711F990D5300AD6336 /* Assets.xcassets in Resources */,
+				57B1946F1F990D5300AD6336 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57B194781F990D5400AD6336 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57B194621F990D5300AD6336 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57B1946C1F990D5300AD6336 /* ViewController.swift in Sources */,
+				57B1946A1F990D5300AD6336 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57B194761F990D5400AD6336 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57B1947F1F990D5400AD6336 /* HallosceneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57B1947C1F990D5400AD6336 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57B194651F990D5300AD6336 /* Halloscene */;
+			targetProxy = 57B1947B1F990D5400AD6336 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57B1946D1F990D5300AD6336 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57B1946E1F990D5300AD6336 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		57B194721F990D5300AD6336 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57B194731F990D5300AD6336 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57B194811F990D5400AD6336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		57B194821F990D5400AD6336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57B194841F990D5400AD6336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JKBPKH2QVT;
+				INFOPLIST_FILE = Halloscene/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.victornouvellet.Halloscene;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57B194851F990D5400AD6336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JKBPKH2QVT;
+				INFOPLIST_FILE = Halloscene/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.victornouvellet.Halloscene;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		57B194871F990D5400AD6336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JKBPKH2QVT;
+				INFOPLIST_FILE = HallosceneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.victornouvellet.HallosceneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Halloscene.app/Halloscene";
+			};
+			name = Debug;
+		};
+		57B194881F990D5400AD6336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JKBPKH2QVT;
+				INFOPLIST_FILE = HallosceneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.victornouvellet.HallosceneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Halloscene.app/Halloscene";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57B194611F990D5300AD6336 /* Build configuration list for PBXProject "Halloscene" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57B194811F990D5400AD6336 /* Debug */,
+				57B194821F990D5400AD6336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57B194831F990D5400AD6336 /* Build configuration list for PBXNativeTarget "Halloscene" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57B194841F990D5400AD6336 /* Debug */,
+				57B194851F990D5400AD6336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57B194861F990D5400AD6336 /* Build configuration list for PBXNativeTarget "HallosceneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57B194871F990D5400AD6336 /* Debug */,
+				57B194881F990D5400AD6336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57B1945E1F990D5300AD6336 /* Project object */;
+}
