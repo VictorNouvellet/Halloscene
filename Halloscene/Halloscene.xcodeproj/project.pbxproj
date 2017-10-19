@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		57B1946A1F990D5300AD6336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B194691F990D5300AD6336 /* AppDelegate.swift */; };
-		57B1946C1F990D5300AD6336 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B1946B1F990D5300AD6336 /* ViewController.swift */; };
+		57B1946C1F990D5300AD6336 /* HSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B1946B1F990D5300AD6336 /* HSViewController.swift */; };
 		57B1946F1F990D5300AD6336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B1946D1F990D5300AD6336 /* Main.storyboard */; };
 		57B194711F990D5300AD6336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B194701F990D5300AD6336 /* Assets.xcassets */; };
 		57B194741F990D5300AD6336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B194721F990D5300AD6336 /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		57B194661F990D5300AD6336 /* Halloscene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Halloscene.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B194691F990D5300AD6336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57B1946B1F990D5300AD6336 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57B1946B1F990D5300AD6336 /* HSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSViewController.swift; sourceTree = "<group>"; };
 		57B1946E1F990D5300AD6336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57B194701F990D5300AD6336 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57B194731F990D5300AD6336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				57B194691F990D5300AD6336 /* AppDelegate.swift */,
-				57B1946B1F990D5300AD6336 /* ViewController.swift */,
+				57B1946B1F990D5300AD6336 /* HSViewController.swift */,
 				57B1946D1F990D5300AD6336 /* Main.storyboard */,
 				57B194701F990D5300AD6336 /* Assets.xcassets */,
 				57B194721F990D5300AD6336 /* LaunchScreen.storyboard */,
@@ -199,7 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57B1946C1F990D5300AD6336 /* ViewController.swift in Sources */,
+				57B1946C1F990D5300AD6336 /* HSViewController.swift in Sources */,
 				57B1946A1F990D5300AD6336 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,7 +355,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JKBPKH2QVT;
-				INFOPLIST_FILE = Halloscene/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.victornouvellet.Halloscene;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -370,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JKBPKH2QVT;
-				INFOPLIST_FILE = Halloscene/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.victornouvellet.Halloscene;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -12,22 +12,67 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Halloscene" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HSViewController" customModule="Halloscene" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HallosceneBall" translatesAutoresizingMaskIntoConstraints="NO" id="RDs-8l-1FQ">
-                                <rect key="frame" x="116" y="262" width="143" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27W-qr-0FE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HallosceneBall" translatesAutoresizingMaskIntoConstraints="NO" id="RDs-8l-1FQ">
+                                        <rect key="frame" x="116" y="90" width="143" height="143"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="RDs-8l-1FQ" firstAttribute="centerX" secondItem="27W-qr-0FE" secondAttribute="centerX" id="FZB-tD-php"/>
+                                    <constraint firstItem="RDs-8l-1FQ" firstAttribute="top" secondItem="27W-qr-0FE" secondAttribute="top" constant="90" id="bWp-BJ-376"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="z19-xy-gQ4" appends="YES" id="rXf-4C-EbO"/>
+                                    <outletCollection property="gestureRecognizers" destination="E5M-Tg-YNj" appends="YES" id="bzj-5f-T9k"/>
+                                </connections>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Jack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3s-Xi-Zne">
+                                <rect key="frame" x="20" y="616" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z3s-Xi-Zne" secondAttribute="trailing" constant="20" id="2rz-zQ-CFt"/>
+                            <constraint firstItem="27W-qr-0FE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DWB-ck-MEj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="27W-qr-0FE" secondAttribute="bottom" constant="80" id="Hk7-O8-CKN"/>
+                            <constraint firstItem="27W-qr-0FE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZYZ-P4-a1j"/>
+                            <constraint firstItem="27W-qr-0FE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fao-nY-EgI"/>
+                            <constraint firstItem="Z3s-Xi-Zne" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j6d-HV-yvZ"/>
+                            <constraint firstItem="Z3s-Xi-Zne" firstAttribute="top" secondItem="27W-qr-0FE" secondAttribute="bottom" constant="29" id="qXW-pR-9mo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z3s-Xi-Zne" secondAttribute="bottom" constant="30" id="vB4-U2-UyX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ballImageView" destination="RDs-8l-1FQ" id="AwA-2S-fMW"/>
+                        <outlet property="containerView" destination="27W-qr-0FE" id="l0E-Ms-Xte"/>
+                        <outlet property="messageLabel" destination="Z3s-Xi-Zne" id="5Ca-pg-GTq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="z19-xy-gQ4">
+                    <connections>
+                        <action selector="tapDetected:" destination="BYZ-38-t0r" id="yQ0-9o-PIw"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTouchesRequired="2" id="E5M-Tg-YNj">
+                    <connections>
+                        <action selector="tapDetected:" destination="BYZ-38-t0r" id="LMj-TL-iq8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="114.69265367316342"/>
         </scene>
     </scenes>
     <resources>
