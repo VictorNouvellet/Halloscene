@@ -84,7 +84,7 @@
 				57B194721F990D5300AD6336 /* LaunchScreen.storyboard */,
 				57B194751F990D5300AD6336 /* Info.plist */,
 			);
-			path = Halloscene;
+			name = Halloscene;
 			sourceTree = "<group>";
 		};
 		57B1947D1F990D5400AD6336 /* HallosceneTests */ = {
