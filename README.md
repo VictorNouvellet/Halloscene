@@ -5,7 +5,7 @@
 # Halloscene App 
 [![GitHub license](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://raw.githubusercontent.com/VictorNouvellet/Halloscene/master/LICENCE) ![platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)
 
-More coming soon...
+Play with a material design pumpkin.
 
 ## Installation Requirements
 
