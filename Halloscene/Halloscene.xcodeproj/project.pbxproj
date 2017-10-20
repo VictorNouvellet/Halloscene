@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5708E4B31F99857700A55C73 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57B194801F990D5400AD6336 /* Info.plist */; };
+		573FE4711F99C8310043B0C9 /* AppIconHalloween@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 573FE46F1F99C80B0043B0C9 /* AppIconHalloween@2x.png */; };
+		573FE4721F99C8310043B0C9 /* AppIconHalloween@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 573FE4701F99C80B0043B0C9 /* AppIconHalloween@3x.png */; };
 		57B1946A1F990D5300AD6336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B194691F990D5300AD6336 /* AppDelegate.swift */; };
 		57B1946C1F990D5300AD6336 /* HSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B1946B1F990D5300AD6336 /* HSViewController.swift */; };
 		57B1946F1F990D5300AD6336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B1946D1F990D5300AD6336 /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5708E4B51F9985A300A55C73 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		573FE46F1F99C80B0043B0C9 /* AppIconHalloween@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconHalloween@2x.png"; sourceTree = "<group>"; };
+		573FE4701F99C80B0043B0C9 /* AppIconHalloween@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconHalloween@3x.png"; sourceTree = "<group>"; };
 		57B194661F990D5300AD6336 /* Halloscene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Halloscene.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B194691F990D5300AD6336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B1946B1F990D5300AD6336 /* HSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSViewController.swift; sourceTree = "<group>"; };
@@ -56,12 +62,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5708E4B41F9985A300A55C73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5708E4B51F9985A300A55C73 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		57B1945D1F990D5300AD6336 = {
 			isa = PBXGroup;
 			children = (
 				57B194681F990D5300AD6336 /* Halloscene */,
 				57B1947D1F990D5400AD6336 /* HallosceneTests */,
 				57B194671F990D5300AD6336 /* Products */,
+				5708E4B41F9985A300A55C73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +98,8 @@
 				57B194701F990D5300AD6336 /* Assets.xcassets */,
 				57B194721F990D5300AD6336 /* LaunchScreen.storyboard */,
 				57B194751F990D5300AD6336 /* Info.plist */,
+				573FE46F1F99C80B0043B0C9 /* AppIconHalloween@2x.png */,
+				573FE4701F99C80B0043B0C9 /* AppIconHalloween@3x.png */,
 			);
 			name = Halloscene;
 			sourceTree = "<group>";
@@ -179,6 +196,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573FE4711F99C8310043B0C9 /* AppIconHalloween@2x.png in Resources */,
+				573FE4721F99C8310043B0C9 /* AppIconHalloween@3x.png in Resources */,
+				5708E4B31F99857700A55C73 /* Info.plist in Resources */,
 				57B194741F990D5300AD6336 /* LaunchScreen.storyboard in Resources */,
 				57B194711F990D5300AD6336 /* Assets.xcassets in Resources */,
 				57B1946F1F990D5300AD6336 /* Main.storyboard in Resources */,
@@ -290,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -341,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -353,12 +373,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JKBPKH2QVT;
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.victornouvellet.Halloscene;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -368,12 +390,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JKBPKH2QVT;
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.victornouvellet.Halloscene;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

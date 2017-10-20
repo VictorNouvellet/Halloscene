@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,22 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27W-qr-0FE">
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27W-qr-0FE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HallosceneBall" translatesAutoresizingMaskIntoConstraints="NO" id="RDs-8l-1FQ">
                                         <rect key="frame" x="116" y="90" width="143" height="143"/>
+                                        <gestureRecognizers/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="RDs-8l-1FQ" firstAttribute="centerX" secondItem="27W-qr-0FE" secondAttribute="centerX" id="FZB-tD-php"/>
                                     <constraint firstItem="RDs-8l-1FQ" firstAttribute="top" secondItem="27W-qr-0FE" secondAttribute="top" constant="90" id="bWp-BJ-376"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="z19-xy-gQ4" appends="YES" id="rXf-4C-EbO"/>
-                                    <outletCollection property="gestureRecognizers" destination="E5M-Tg-YNj" appends="YES" id="bzj-5f-T9k"/>
-                                </connections>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Jack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3s-Xi-Zne">
                                 <rect key="frame" x="20" y="616" width="335" height="21"/>
@@ -61,16 +60,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="z19-xy-gQ4">
-                    <connections>
-                        <action selector="tapDetected:" destination="BYZ-38-t0r" id="yQ0-9o-PIw"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTouchesRequired="2" id="E5M-Tg-YNj">
-                    <connections>
-                        <action selector="tapDetected:" destination="BYZ-38-t0r" id="LMj-TL-iq8"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="114.69265367316342"/>
         </scene>
