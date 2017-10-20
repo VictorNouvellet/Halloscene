@@ -26,7 +26,7 @@
                                         <gestureRecognizers/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="RDs-8l-1FQ" firstAttribute="centerX" secondItem="27W-qr-0FE" secondAttribute="centerX" id="FZB-tD-php"/>
@@ -52,6 +52,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z3s-Xi-Zne" secondAttribute="bottom" constant="30" id="vB4-U2-UyX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="owd-lo-nFc" appends="YES" id="Nxb-yc-61T"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="ballImageView" destination="RDs-8l-1FQ" id="AwA-2S-fMW"/>
@@ -60,6 +63,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="owd-lo-nFc">
+                    <connections>
+                        <action selector="ballLongPressHandle:" destination="BYZ-38-t0r" id="6rh-6K-Eqf"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="114.69265367316342"/>
         </scene>

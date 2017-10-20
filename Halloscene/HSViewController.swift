@@ -28,6 +28,7 @@ class HSViewController: UIViewController {
     // Other properties
     var scaryBall: Bool = false
     var timerLabel: Timer? = nil
+    var particleEmitter = CAEmitterLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,14 +42,13 @@ class HSViewController: UIViewController {
         
         self.configureCollisionAndElasticity()
         self.configureMotion()
+        self.configureParticles()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: Interface Builder methods
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if touches.count == 1 && self.containerView.frame.contains(touches.first!.location(in: self.containerView)) {
@@ -66,6 +66,22 @@ class HSViewController: UIViewController {
             }
         } else if touches.count == 2 {
             self.changeBallImage()
+        }
+    }
+    
+    // MARK: Interface Builder methods
+    
+    @IBAction func ballLongPressHandle(_ gesture: UIGestureRecognizer) {
+        // Emit candies particles
+        switch gesture.state {
+        case .began:
+            createParticles()
+            break
+        case .cancelled, .ended:
+            self.particleEmitter.emitterCells = []
+            break
+        default:
+            break
         }
     }
     
@@ -88,12 +104,12 @@ class HSViewController: UIViewController {
             self.helloJack()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.setHalloweenIcon()
+                self.setIcon()
             }
         }
     }
     
-    private func setHalloweenIcon() {
+    private func setIcon() {
         let today = Date()
         let calendar = Calendar.current
         let month = calendar.component(.month, from: today)
@@ -101,14 +117,18 @@ class HSViewController: UIViewController {
         
         if day == 20 && month == 10 {
             print("Yeah! It is Halloween")
-            UIApplication.shared.setAlternateIconName("AppIconHalloween", completionHandler: { (error) in
-                print("Changed icon to Halloween icon. Error: \(String(describing: error?.localizedDescription))")
-            })
+            if UIApplication.shared.alternateIconName == nil {
+                UIApplication.shared.setAlternateIconName("AppIconHalloween", completionHandler: { (error) in
+                    print("Changed icon to Halloween icon. Error: \(String(describing: error?.localizedDescription))")
+                })
+            }
         } else {
             print("Ohhh! It is not Halloween")
-            UIApplication.shared.setAlternateIconName(nil, completionHandler: { (error) in
-                print("Changed icon to normal icon. Error: \(String(describing: error?.localizedDescription))")
-            })
+            if UIApplication.shared.alternateIconName != nil {
+                UIApplication.shared.setAlternateIconName(nil, completionHandler: { (error) in
+                    print("Changed icon to normal icon. Error: \(String(describing: error?.localizedDescription))")
+                })
+            }
         }
     }
     
@@ -156,6 +176,8 @@ extension HSViewController {
     }
 }
 
+// MARK: - Motion methods extension
+
 extension HSViewController {
     fileprivate func configureMotion() {
         self.removeGravity()
@@ -182,6 +204,51 @@ extension HSViewController {
                 self.ballImageView.transform = CGAffineTransform(rotationAngle: CGFloat(atan2(grav.x, grav.y)) - CGFloat.pi)
             }
         }
+    }
+}
+
+// MARK: - Particles methods extension
+
+extension HSViewController {
+    fileprivate func configureParticles() {
+        particleEmitter.emitterPosition = CGPoint(x: view.center.x, y: -96)
+        particleEmitter.emitterShape = kCAEmitterLayerLine
+        particleEmitter.emitterSize = CGSize(width: view.frame.size.width, height: 1)
+        
+        view.layer.addSublayer(particleEmitter)
+    }
+    
+    fileprivate func createParticles() {
+        let orangeCandy = makeCandyEmitterCell(color: UIColor.orange)
+        let ghost = makeGhostEmitterCell()
+        particleEmitter.emitterCells = [orangeCandy, ghost]
+    }
+    
+    fileprivate func makeCandyEmitterCell(color: UIColor) -> CAEmitterCell {
+        return self.makeEmitterCell(color: color, image: #imageLiteral(resourceName: "Candy"))
+    }
+    
+    fileprivate func makeGhostEmitterCell() -> CAEmitterCell {
+        return self.makeEmitterCell(color: .black, image: #imageLiteral(resourceName: "Ghost"))
+    }
+    
+    fileprivate func makeEmitterCell(color: UIColor, image: UIImage?) -> CAEmitterCell {
+        let cell = CAEmitterCell()
+        cell.birthRate = 5
+        cell.lifetime = 7.0
+        cell.lifetimeRange = 0
+        cell.color = color.cgColor
+        cell.velocity = 300
+        cell.velocityRange = 50
+        cell.emissionLongitude = CGFloat.pi
+        cell.emissionRange = CGFloat.pi / 4
+        cell.spin = 2
+        cell.spinRange = 3
+        cell.scaleRange = 0.5
+        cell.scaleSpeed = -0.05
+        
+        cell.contents = image?.cgImage
+        return cell
     }
 }
 

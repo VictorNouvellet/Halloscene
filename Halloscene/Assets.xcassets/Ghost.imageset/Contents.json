@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "AppIconHalloween.png",
+      "filename" : "Ghost.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "AppIconHalloween@2x.png",
+      "filename" : "Ghost@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "AppIconHalloween@3x.png",
+      "filename" : "Ghost@3x.png",
       "scale" : "3x"
     }
   ],
