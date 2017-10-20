@@ -17,9 +17,9 @@ class HSViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     
     // Animator properties
-    var animator: UIDynamicAnimator? = nil
-    var snapBehavior: UISnapBehavior? = nil
-    var gravityBehavior: UIGravityBehavior? = nil
+    var animator: UIDynamicAnimator?
+    var snapBehavior: UISnapBehavior?
+    var gravityBehavior: UIGravityBehavior?
     
     // Motion properties
     var motionManager = CMMotionManager()
@@ -27,7 +27,7 @@ class HSViewController: UIViewController {
     
     // Other properties
     var scaryBall: Bool = false
-    var timerLabel: Timer? = nil
+    var labelTimer: Timer? = nil
     var particleEmitter = CAEmitterLayer()
     
     override func viewDidLoad() {
@@ -40,14 +40,10 @@ class HSViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        // Configure Animator and Particles
         self.configureCollisionAndElasticity()
         self.configureMotion()
         self.configureParticles()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -99,10 +95,10 @@ class HSViewController: UIViewController {
     
     private func changeBallImage() {
         self.scaryBall = !self.scaryBall
+        // TODO: Swap images on layer level
         self.ballImageView.image = self.scaryBall ? #imageLiteral(resourceName: "HallosceneBallScary") : #imageLiteral(resourceName: "HallosceneBall")
         if self.scaryBall {
             self.helloJack()
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.setIcon()
             }
@@ -136,15 +132,17 @@ class HSViewController: UIViewController {
         self.messageLabel.text = "Hello Jack!"
         self.messageLabel.isHidden = false
         
-        self.timerLabel?.invalidate()
-        self.timerLabel = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { (timer) in
+        self.labelTimer?.invalidate()
+        self.labelTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { (timer) in
             self.messageLabel.isHidden = true
         })
     }
 }
 
+// MARK: - Gravition related methods extension
+
 extension HSViewController {
-    private func configureGravity() {
+    fileprivate func configureGravity() {
         self.gravityBehavior = UIGravityBehavior(items: [self.ballImageView])
         self.gravityBehavior!.magnitude = 0.8
         self.animator?.addBehavior(self.gravityBehavior!)
@@ -182,9 +180,10 @@ extension HSViewController {
     fileprivate func configureMotion() {
         self.removeGravity()
         self.configureGravity()
+        
         motionManager.startDeviceMotionUpdates(to: motionQueue) { (deviceMotion, error) in
             if let safeError = error {
-                NSLog("\(safeError)")
+                print("\(safeError)")
             }
             
             guard let safeDeviceMotion = deviceMotion else {
@@ -215,7 +214,7 @@ extension HSViewController {
         particleEmitter.emitterShape = kCAEmitterLayerLine
         particleEmitter.emitterSize = CGSize(width: view.frame.size.width, height: 1)
         
-        view.layer.addSublayer(particleEmitter)
+        view.layer.insertSublayer(particleEmitter, below: containerView.layer) //.addSublayer(particleEmitter)
     }
     
     fileprivate func createParticles() {
